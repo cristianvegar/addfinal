@@ -1,0 +1,48 @@
+<!DOCTYPE html>    
+<html>
+    <head>
+        <style>
+           
+            .day {
+                display: none;
+    
+            }
+            .staging {
+                display: none;
+    
+            }
+    
+     
+        </style>
+    </head>  
+<body>      
+<form>
+    <p>Seleccione una opcion</p>
+    <select id="Opciones" onchange="selectoroptions()">
+    <option >Selecciona una opcion</option>
+    <option >Que dia es hoy ?</option>
+    <option >Que estacion estamos</option>
+    </select>
+    
+    <select id="dia">
+        <option class="na">Nothing</option>
+        <option class="day" value ="Lunes">Lunes</option>
+        <option  class="day" value ="Martes">Martes</option>
+        <option  class="day" value ="Miercoles">Miercoles</option>
+        <option  class="day" value ="Jueves">Jueves</option>
+        <option  class="day" value ="Viernes">Viernes</option>
+        <option  class="day" value ="Sabado">Sabado</option>
+        <option  class="day" value ="Domingo">Domingo</option>
+        <option  class="staging" value ="Otoño">Otoño</option>
+        <option  class="staging" value ="Primavera">Primavera</option>
+        <option  class="staging" value ="Verano">Verano</option>
+        <option  class="staging" value ="Invierno">Invierno</option>
+        </select> 
+
+    <p><input type="submit" value="Submit"></p>
+    </form>
+
+
+<script src="index3.js"></script>
+</body>    
+</html>    
