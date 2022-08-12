@@ -2,7 +2,7 @@ var categories=0;
 var subcategories=1;
 var catCurr = document.getElementById("numCats").value;
 var currCat = 0;
-$( "#submitBtn" ).click(function() {
+$( "#form1" ).submit(function() {
   loadJson();
 });
 
@@ -53,23 +53,23 @@ function genera_name() {
 
 
       var celda = document.createElement("td");
-      var textoCelda = document.createTextNode("Texto2");
+      var textoCelda = document.createTextNode("Pregunta");
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
 
 
       var celda = document.createElement("td");
-      var textoCelda = document.createTextNode("Texto3");
+      var textoCelda = document.createTextNode("Opción 1");
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
 
       var celda = document.createElement("td");
-      var textoCelda = document.createTextNode("Texto4");
+      var textoCelda = document.createTextNode("Opción 2");
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
 
       var celda = document.createElement("td");
-      var textoCelda = document.createTextNode("Texto5");
+      var textoCelda = document.createTextNode("Visible");
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
     
@@ -142,5 +142,5 @@ function loadJson (){
     catsJson.push(currJsonCat);
   }
   str = JSON.stringify(catsJson);
-  $("#result").html('<p>'+str+'</p>');
+  $("#result").val(str);
 };
