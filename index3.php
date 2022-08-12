@@ -18,7 +18,6 @@ foreach ($array as $key => $value) {
     $id = $value['id'];
     $opts = $value['opts'];
     $txt1 = $opts['txt1'];
-    $subcat = $value['subCats'];
     ?>    
     <option value="<?=$txt1?>" data-idcat="<?=$id?>"><?=$txt1?></option>
     <?php

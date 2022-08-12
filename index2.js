@@ -10,10 +10,3 @@ $(document).on('click', '.chck',  function(){
     $(".subcats-"+idcat).removeClass("subcatsActive");
   }
 });
-$(document).on('click', '.chcksub',  function(){
-  // var idcat = $(this).data('idcat');
-  // var val = $(this).val().toLowerCase();
-  // var group = "input:checkbox[name='optsub-" + idcat + "']";
-  // $(group).prop("checked", false);
-  // $(this).prop("checked", true);
-});

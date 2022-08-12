@@ -1,7 +1,6 @@
 <?php
 if(isset($_POST))
 {
-    // print_r($_POST);
     $total = $_POST['totalCat'];
     for ($i=1; $i <= $total; $i++) { 
         $cat = $_POST['nameopt-'.$i];

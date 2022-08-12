@@ -1,6 +1,6 @@
 <?php
-    if(isset($_POST))
-    {
-        echo $_POST['resp'];
-    }
+if(isset($_POST))
+{
+    echo $_POST['resp'];
+}
 ?>
