@@ -29,14 +29,16 @@ foreach ($array as $key => $value) {
     $opts = $value['opts'];
     $txt1 = $opts['txt1'];
     $txt2 = $opts['txt2'];
+    $txt2 = strtolower($txt2);
     $txt3 = $opts['txt3'];
     $txt4 = $opts['txt4'];
+    $txt4 = strtolower($txt4);
     ?>
     <div class="cats">
         <label><?=$txt1?></label>
         <input name='nameopt-<?=$id?>' type="hidden" value='<?=$txt1?>'>
         <label>
-            <input name="opt-<?=$id?>" class="chck" data-idcat="<?=$id?>" value="<?=$txt2?>" type="checkbox">
+            <input name="opt-<?=$id?>" class="chck" data-idcat="<?=$id?>" value="<?=$txt2?>" type="checkbox" <?= ($txt4 == 'true' && $txt2 == 'si') ? 'checked' : '';?>>
             <span class="label"><?=$txt2?></span>
         </label>
         <label>
@@ -52,23 +54,22 @@ foreach ($array as $key => $value) {
                 $txt1 = $value['txt1'];
                 $txt2 = $value['txt2'];
                 $txt3 = $value['txt3'];
-                $txt4 = $value['txt4'];
                 ?>
                 <div class="subcats subcats-<?=$id?> <?= ($txt4 == 'true') ? 'subcatsActive' : '';?>" id="subcats-<?=$id?>">
                     <label><?=$txt1?></label>
                     <input name='namesub-<?=$id?>-sub<?=$key?>' type="hidden" value='<?=$txt1?>'>
                     <label>
-                        <input name="optsub-<?=$id?>-sub<?=$key?>" class="chcksub" data-idcat="<?=$id?>" value="<?=$txt2?>" type="checkbox">
+                        <input name="optsub-<?=$id?>-sub<?=$key?>" class="chcksub" data-idcat="<?=$id?>" value="<?=$txt2?>" type="checkbox" >
                         <span class="label"><?=$txt2?></span>
                     </label>
                     <label>
                         <input name="optsub-<?=$id?>-sub<?=$key?>" class="chcksub" data-idcat="<?=$id?>" value="<?=$txt3?>" type="checkbox">
                         <span class="label"><?=$txt3?></span>
                     </label>
-                    <label>
+                    <!-- <label>
                         <input name="optsub-<?=$id?>-sub<?=$key?>" class="chcksub" data-idcat="<?=$id?>" value="<?=$txt3?>" type="checkbox">
                         <span class="label"><?=$txt3?></span>
-                    </label>
+                    </label> -->
                     <input type="hidden" name='totalsub-<?=$id?>' value='<?=$totalSub?>'>
                 </div>
             <?php

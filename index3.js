@@ -1,7 +1,5 @@
 $(document).on('change', '#selectOpts',  function(){
-  var idsele = $("#selectOpts option:selected");
-  var val = $(this).find(':selected').data('idcat')
-  alert(val);
+  var val = $(this).find(':selected').data('idcat');
   val = Number(val - 1);
   $.getJSON("./data.json", function(data){
     var subCats = data[val]['subCats'];
