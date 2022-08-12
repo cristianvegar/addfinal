@@ -2,15 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   </head>
+
 
   <body onload="genera_name()">
     <input type="button" value="Genera una categoria" onclick="genera_categoria()">
     <input type="button" value="Genera una subcategoria" onclick="genera_subcategoria()">
+    <input type="hidden" value="0" id="numCats">
+    <input type="hidden" value="0" id="currCat">
+    <input type="hidden" value="0" id="numSub">
     <script src="index1.js"></script>
-  <form method="POST" action="./index1.php">
+  <form method="POST" >
     <table id="table"></table>
-    <input type="submit" value="ENVIAR">
+    <input type="button" id="submitBtn" value="ENVIAR" >
   </form>
+  <div><p id="result"></p></div>
+  
+  
   </body>
+
+  <script src="index1.js"></script>
 </html>
