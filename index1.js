@@ -46,7 +46,7 @@ function genera_name() {
   var tabla   = document.getElementById("table");
   var tblBody = document.createElement("tbody");
   var celda = document.createElement("td");
-  var textoCelda = document.createTextNode("Titulo1");
+  var textoCelda = document.createTextNode("Num.");
   var hilera = document.createElement("tr");
   celda.appendChild(textoCelda);
   hilera.appendChild(celda);
